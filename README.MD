@@ -64,7 +64,7 @@
 
 ```bash
 # Клонируй репозиторий
-git clone https://github.com/sallyqx/pomodoro-timer.git
+git clone https://github.com/zxzum/pomodoro-timer.git
 cd pomodoro-timer
 
 # Установи зависимости

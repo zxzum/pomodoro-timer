@@ -1,0 +1,143 @@
+################################################################################
+# OS / Editor junk (macOS, editors, archives)
+################################################################################
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Spotlight / Time Machine
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+
+# Archives / dumps
+*.swp
+*.swo
+*~
+*.tmp
+*.temp
+*.bak
+*.orig
+*.log
+*.tgz
+*.gz
+*.zip
+
+# Editor folders
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+# launch.json / tasks.json / extensions.json
+
+################################################################################
+# Node / TypeScript
+################################################################################
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+
+# pnpm / yarn
+pnpm-lock.yaml
+yarn.lock
+
+# TypeScript build artifacts
+dist/
+out/
+build/
+lib/
+temp/
+tmp/
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# Transpiled JS maps
+*.js.map
+
+################################################################################
+# VS Code extension specifics
+################################################################################
+
+*.vsix
+*.vsixmanifest
+
+# VSCE
+.vscode-test/
+.vscode-test/**
+
+# (Mocha/Jest/E2E)
+coverage/
+.nyc_output/
+.junit/
+reports/
+test-results/
+playwright-report/
+blob-report/
+.vscode-test-web/
+
+################################################################################
+# Tooling caches
+################################################################################
+
+# ESLint
+.eslintcache
+
+# Prettier
+.prettier-cache/
+
+# TypeScript ESLint parser cache (на всякий случай)
+.tslint-cache/
+.tscache/
+
+# SWC / Babel
+.swc/
+.cache/
+.babel-cache/
+.babelrc.cjs.tmp
+
+# Turbo / Nx / Lage
+.turbo/
+nx-cache/
+lage-output/
+
+################################################################################
+# Env / secrets
+################################################################################
+
+.env
+.env.*
+!.env.example
+
+################################################################################
+# Logs / profiling
+################################################################################
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.pid
+*.seed
+*.pid.lock
+
+################################################################################
+# Misc. binaries & system files
+################################################################################
+
+*.node
+*.dSYM/
+*.core
+*.lcov
