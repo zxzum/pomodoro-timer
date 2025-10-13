@@ -1,0 +1,33 @@
+{
+    "name": "simple-pomodoro",
+    "displayName": "Простой Помодоро",
+    "description": "Очень простой помодоро таймер",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "pomodoro.click",
+                "title": "Помодоро"
+            }
+        ]
+    },
+    "scripts": {
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.80.0",
+        "@types/node": "16.x",
+        "typescript": "^5.0.4"
+    }
+}

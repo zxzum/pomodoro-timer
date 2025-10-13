@@ -1,0 +1,6 @@
+{
+    "pomodoroTimer.workDuration": 25,
+    "pomodoroTimer.shortBreakDuration": 5,
+    "pomodoroTimer.longBreakDuration": 15,
+    "pomodoroTimer.sessionsUntilLongBreak": 4
+}
