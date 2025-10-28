@@ -1,33 +1,69 @@
 {
-    "name": "simple-pomodoro",
-    "displayName": "Простой Помодоро",
-    "description": "Очень простой помодоро таймер",
-    "version": "1.0.0",
-    "engines": {
-        "vscode": "^1.80.0"
-    },
-    "categories": [
-        "Other"
+  "name": "pomodoro-timer",
+  "displayName": "Pomodoro Timer",
+  "description": "Professional Pomodoro Timer with beautiful UI and customization",
+  "version": "1.0.0",
+  "publisher": "zxzum",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pomodoroTimer.showPanel",
+        "title": "Pomodoro: Show Control Panel"
+      },
+      {
+        "command": "pomodoroTimer.toggleTimer",
+        "title": "Pomodoro: Toggle Timer"
+      }
     ],
-    "activationEvents": [
-        "onStartupFinished"
-    ],
-    "main": "./out/extension.js",
-    "contributes": {
-        "commands": [
-            {
-                "command": "pomodoro.click",
-                "title": "Помодоро"
-            }
-        ]
-    },
-    "scripts": {
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./"
-    },
-    "devDependencies": {
-        "@types/vscode": "^1.80.0",
-        "@types/node": "16.x",
-        "typescript": "^5.0.4"
+    "configuration": {
+      "title": "Pomodoro Timer",
+      "properties": {
+        "pomodoroTimer.workDuration": {
+          "type": "number",
+          "default": 25,
+          "description": "Work duration in minutes",
+          "minimum": 1,
+          "maximum": 60
+        },
+        "pomodoroTimer.breakDuration": {
+          "type": "number",
+          "default": 5,
+          "description": "Break duration in minutes",
+          "minimum": 1,
+          "maximum": 30
+        },
+        "pomodoroTimer.longBreakDuration": {
+          "type": "number",
+          "default": 15,
+          "description": "Long break duration in minutes",
+          "minimum": 1,
+          "maximum": 60
+        },
+        "pomodoroTimer.sessionsBeforeLongBreak": {
+          "type": "number",
+          "default": 4,
+          "description": "Number of sessions before long break",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "pomodoroTimer.soundEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Play sound when timer ends"
+        },
+        "pomodoroTimer.notificationEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show desktop notification when timer ends"
+        }
+      }
     }
+  }
 }
